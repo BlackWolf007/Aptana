@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>javascript</title>
+		<meta name="author" content="Administrator" />
+		
+		<script type="text/javascript">
+            function InitArray(numLenght)
+            {
+                this.lenght = numLenght;
+                for (var x = 1; x <= numLenght; x++)
+                {
+                    this[x] = 0;
+                }
+                return this;
+            }
+            myArray = new InitArray(10);
+            myArray[1] = "Hà Nội";
+            myArray[2] = "TP HCM";
+            with (document)
+            {
+                for (var x = 1; x <= myArray.lenght; x++)
+                {
+                    if (myArray[x] != 0)
+                    {
+                        write(myArray[x] + "<BR>");
+                    }
+                }
+            }
+
+            function Checkage(form)
+            {
+                if ((form.age.value < 0) || (form.age.value > 120))
+                {
+                    alert("tuổi nhập vào không hợp lệ! mời bạn nhập lại");
+                    form.age.value = 0;
+                }
+            }
+
+
+        </script>
+		<!-- Date: 2014-10-03 -->
+	</head>
+	<body>
+ <form name="formage">
+            User name : <br/>
+            Last Name: <input type="text" name="last_name" maxlength="150" size="20"/><br>
+            First Name: <input type="text" name="first_name" maxlength="150" size="20"/><br>
+            Age: <input type="text" name="age" maxlength="3" size="2" onchange="Checkage(formage)" value="10"/><br>
+
+            <input type="submit" value="Submit"/>
+            <input type="reset"/>
+        </form>
+
+        <script type="text/javascript">
+            document.write("appCodeName" + navigator.appCodeName.toString() + "<br>");
+            document.write("appName" + navigator.appName.toString() + "<br>");
+            document.write("appVerstion" + navigator.appVersion.toString() + "<br>");
+            document.write("userAgent" + navigator.userAgent.toString() + "<br>");
+        </script>
+
+    
+        <span style="font-size:10px">Heloo</span>
+	</body>
+</html>
+
