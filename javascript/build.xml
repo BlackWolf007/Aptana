@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="extract" name="Core_DN">
+	<!-- プロパティ（ディレクトリ）を定義 -->
+	<property name="dest_test.dir" value="D:/working/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final/standalone/deployments/dn_test.war/WEB-INF/classes" />
+	<property name="dest.dir" value="D:/working/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final/standalone/deployments/dn.war/WEB-INF/classes" />
+	<property name="lib.dir" value="D:/Brangista/lib/">
+	</property>
+	<property name="copy.dir" value="D:/Git/dn/coreDN/lib">
+	</property>
+	<property name="source_led.dir" value="D:/Git/led/led/">
+	</property>
+	<property name="dest_git_pl.dir" value="D:/Git/pl/pl/">
+	</property>
+	<target name="copy">
+		<copy todir="${copy.dir}" overwrite="true">
+			<fileset dir="${lib.dir}" includes="*.jar" />
+		</copy>
+	</target>
+
+	<target name="extract" depends="copy">
+		<unjar dest="${dest.dir}" overwrite="true">
+			<patternset>
+				<include name="**/*.class"/>
+			</patternset>
+			<fileset dir="${lib.dir}" includes="*.jar" />
+		</unjar>
+	</target>
+
+	<target name="extract_test" depends="copy">
+		<unjar dest="${dest_test.dir}" overwrite="true">
+			<patternset>
+				<include name="**/*.class"/>
+			</patternset>
+			<fileset dir="${lib.dir}" includes="*.jar" />
+		</unjar>
+	</target>
+
+	<target name="copy-LED-to-PL-git-folder">
+		<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
+			<exclude name=".svn" />
+		</copydir>
+	</target>
+</project>
