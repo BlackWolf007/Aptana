@@ -47,7 +47,14 @@
 			</copydir>
 		</target>
 
+	<target name="copy-LED-to-PL-git-folder3demo4">
+	</target>
 	<target name="copy-LED-to-PL-git-folder3demo5">
+		<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
+			<exclude name=".svn" />
+		</copydir>
+	</target>
+	<target name="copy-LED-to-PL-git-folder3demo7">
 		<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
 			<exclude name=".svn" />
 		</copydir>
