@@ -40,9 +40,17 @@
 			<exclude name=".svn" />
 		</copydir>
 	</target>
+
 	<target name="copy-LED-to-PL-git-folder3demo2">
 			<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
 				<exclude name=".svn" />
 			</copydir>
 		</target>
+
+		<target name="copy-LED-to-PL-git-folder3demo3">
+		<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
+			<exclude name=".svn" />
+		</copydir>
+	</target>
+
 </project>
