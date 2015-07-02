@@ -69,5 +69,9 @@
 				<exclude name=".svn" />
 			</copydir>
 		</target>
-
+	<target name="commit deo web 2">
+		<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
+			<exclude name=".svn" />
+		</copydir>
+	</target>
 </project>
