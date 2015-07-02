@@ -74,7 +74,7 @@
 			<exclude name=".svn" />
 		</copydir>
 	</target>
-	<target name="commit on client ">
+	<target name="commit on client 2 ">
 			<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
 				<exclude name=".svn" />
 			</copydir>
