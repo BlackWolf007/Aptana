@@ -79,7 +79,7 @@
 				<exclude name=".svn" />
 			</copydir>
 		</target>
-	<target name="test merge master to brand">
+	<target name="test merge master to 100">
 		<copydir dest="${dest_git_pl.dir}" src="${source_led.dir}" forceoverwrite="true">
 			<exclude name=".svn" />
 		</copydir>
